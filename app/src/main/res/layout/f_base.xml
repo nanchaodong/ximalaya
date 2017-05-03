@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="topBarViewModel"
+            type="com.wolf.ximalaya.viewmodel.TopBarViewModel"/>
+
+        <variable
+            name="pageAnim"
+            type="com.wolf.ximalaya.bean.PageAnim"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/body"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/loadbody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:visibility="@{pageAnim.showAnim ? View.VISIBLE : View.GONE}">
+
+                <ProgressBar
+                    android:layout_width="@dimen/d25"
+                    android:layout_height="@dimen/d25"
+                    android:indeterminateDrawable="@drawable/progress_bar_anim"
+                    android:visibility="@{pageAnim.showProcess ? View.VISIBLE : View.GONE}"
+                    />
+
+                <TextView
+                    android:id="@+id/loadText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:text="@{pageAnim.text}"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_bg_f6f6f6"
+                android:visibility="@{pageAnim.showAnim ? View.GONE : View.VISIBLE}"/>
+        </RelativeLayout>
+
+        <com.wolf.ximalaya.view.TopView
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:topBarViewModel="@{topBarViewModel}"/>
+    </RelativeLayout>
+
+</layout>

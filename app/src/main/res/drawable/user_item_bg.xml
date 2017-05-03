@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/tab_nomal_bccbd1"/>
+        </shape>
+    </item>
+    <item android:top="@dimen/d05"
+        android:bottom="@dimen/d05">
+        <shape>
+            <solid android:color="@android:color/white"/>
+            <padding android:top="@dimen/d10"
+                     android:bottom="@dimen/d10"/>
+        </shape>
+    </item>
+</layer-list>

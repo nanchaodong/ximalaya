@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="tab_selected_ff573d">#ff573d</color>
+    <color name="tab_nomal_bccbd1">#bccbd1</color>
+    <color name="tab_shape_back_33000000">#33bccbd1</color>
+    <color name="text_color_676767">#676767</color>
+    <color name="text_color_40676767">#40676767</color>
+    <color name="common_bg_f6f6f6">#f6f6f6</color>
+    <color name="bg_color_e6252b">#e6252b</color>
+    <color name="bg_color_f0f0f0">#f0f0f0</color>
+    <color name="bg_color_ef5b30">#ef5b30</color>
+    <color name="bg_color_33ef5b30">#33ef5b30</color>
+    <color name="bg_color_333a3d3f">#333a3d3f</color>
+    <color name="user_head_bg_color_90000000">#90000000</color>
+</resources>

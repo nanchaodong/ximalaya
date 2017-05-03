@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="topViewModel"
+            type="com.wolf.ximalaya.viewmodel.TopBarViewModel"/>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="presenter"
+            type="com.wolf.ximalaya.presenter.PresentClick"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/d50"
+        android:visibility="@{topViewModel.showTop ? View.VISIBLE:View.GONE}">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/d20">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->presenter.click(0)}">
+
+                <include
+                    layout="@layout/top_image_item"
+                    bind:imageRId="@{topViewModel.leftImage}"
+                    bind:text="@{topViewModel.leftText}"
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="@dimen/d0"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/d10"
+                android:layout_marginLeft="@dimen/d20"
+                android:layout_marginTop="@dimen/d10"
+                android:layout_weight="1"
+                android:background="@drawable/top_input_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:onClick="@{()->presenter.click(3)}"
+                android:visibility="@{topViewModel.showInput ? View.VISIBLE : View.INVISIBLE}">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:src="@mipmap/icon_top_sousuo"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d10"
+                    android:text="好好学习"
+                    android:textColor="@color/tab_nomal_bccbd1"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->presenter.click(1)}"
+                >
+
+                <include
+                    layout="@layout/top_image_item"
+                    bind:imageRId="@{topViewModel.rightTwoImage}"
+                    bind:text="@{topViewModel.rightTwoText}"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->presenter.click(2)}">
+
+                <include
+                    layout="@layout/top_image_item"
+                    bind:imageRId="@{topViewModel.rightImage}"
+                    bind:text="@{topViewModel.rightText}"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@{topViewModel.title}"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</layout>

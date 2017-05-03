@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape>
+            <solid android:color="@color/bg_color_f0f0f0"/>
+            <corners android:radius="@dimen/d20"/>
+
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/d1x"
+        android:left="@dimen/d1x"
+        android:right="@dimen/d1x"
+        android:top="@dimen/d1x">
+        <shape>
+            <solid android:color="@color/tab_shape_back_33000000"/>
+            <corners android:radius="@dimen/d20"/>
+
+        </shape>
+    </item>
+</layer-list>

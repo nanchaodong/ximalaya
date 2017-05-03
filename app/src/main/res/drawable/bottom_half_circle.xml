@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="@color/tab_shape_back_33000000"/>
+            <corners
+                android:topLeftRadius="@dimen/d35"
+                android:topRightRadius="@dimen/d35"/>
+
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/d2"
+        android:right="@dimen/d2"
+        android:top="@dimen/d2">
+        <shape>
+            <solid android:color="@android:color/white"/>
+            <corners
+                android:topLeftRadius="@dimen/d35"
+                android:topRightRadius="@dimen/d35"/>
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/d_1"
+        android:right="@dimen/d_1"
+        android:top="@dimen/d15">
+        <shape>
+            <solid android:color="@android:color/white"/>
+            <corners
+                android:topLeftRadius="@dimen/d35"
+                android:topRightRadius="@dimen/d35"/>
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="@color/tab_shape_back_33000000"
+                android:startColor="@android:color/white"
+                android:angle="90"
+                android:type="linear"/>
+        </shape>
+    </item>
+    <item
+        android:left="@dimen/d1"
+        android:right="@dimen/d1"
+        android:top="@dimen/d10">
+        <shape>
+            <solid android:color="@android:color/white"/>
+            <corners
+                android:topLeftRadius="@dimen/d35"
+                android:topRightRadius="@dimen/d35"/>
+            <gradient
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="@android:color/white"
+                android:startColor="@android:color/white"
+                android:angle="90"
+                android:type="linear"/>
+        </shape>
+    </item>
+
+</layer-list>

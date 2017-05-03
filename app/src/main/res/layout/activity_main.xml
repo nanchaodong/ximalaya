@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+
+        <variable
+            name="presenter"
+            type="com.wolf.ximalaya.presenter.PresentClick"/>
+
+        <variable
+            name="tabViewModels"
+            type="java.util.List&lt;com.wolf.ximalaya.viewmodel.TabViewModel&gt;"/>
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d0"
+            android:layout_weight="1"
+            >
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/tab_bottom_shape"
+            >
+
+            <com.wolf.ximalaya.view.TabView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->presenter.click(tabViewModels, tabViewModels.get(0))}"
+                app:tabBtn="@{tabViewModels.get(0).tabBtn}"
+                />
+
+            <com.wolf.ximalaya.view.TabView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->presenter.click(tabViewModels, tabViewModels.get(1))}"
+                app:tabBtn="@{tabViewModels.get(1).tabBtn}"
+                />
+
+
+            <View
+                android:layout_width="@dimen/d70"
+                android:layout_height="@dimen/d0"/>
+
+
+            <com.wolf.ximalaya.view.TabView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->presenter.click(tabViewModels, tabViewModels.get(2))}"
+                app:tabBtn="@{tabViewModels.get(2).tabBtn}"
+                />
+
+            <com.wolf.ximalaya.view.TabView
+                android:layout_width="@dimen/d0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->presenter.click(tabViewModels, tabViewModels.get(3))}"
+                app:tabBtn="@{tabViewModels.get(3).tabBtn}"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

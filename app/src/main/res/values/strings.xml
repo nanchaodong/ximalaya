@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">XiMaLaYa</string>
+    <string name="tab_read_title">订阅</string>
+    <string name="tab_find_title">发现</string>
+    <string name="tab_main_top_left">消息</string>
+    <string name="tab_main_top_right">下载</string>
+    <string name="tab_main_top_right_two">历史</string>
+    <string name="msg_more">更多</string>
+</resources>

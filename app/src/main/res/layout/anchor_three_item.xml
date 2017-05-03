@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <data>
+
+        <variable
+            name="anchorArticle"
+            type="com.wolf.ximalaya.bean.AnchorArticle"/>
+
+        <import type="android.text.TextUtils"/>
+
+        <import type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/d10">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/anchor_card_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/d2">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                app:anchorUrl="@{anchorArticle.middleLogo}"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:paddingBottom="@dimen/d2"
+                android:paddingLeft="@dimen/d10"
+                android:paddingRight="@dimen/d10"
+                android:paddingTop="@dimen/d2"
+                android:singleLine="true"
+                android:text="@{anchorArticle.nickname}"
+                android:textColor="@color/bg_color_33ef5b30"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/d5"
+            android:text="@{TextUtils.isEmpty(anchorArticle.verifyTitle)? anchorArticle.personDescribe:anchorArticle.verifyTitle}"
+            android:textSize="12sp"
+            android:visibility="@{TextUtils.isEmpty(anchorArticle.verifyTitle) &amp;&amp;TextUtils.isEmpty(anchorArticle.personDescribe) ? View.GONE : View.VISIBLE}"
+            />
+    </LinearLayout>
+
+</layout>
